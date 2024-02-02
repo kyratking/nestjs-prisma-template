@@ -10,14 +10,20 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum MediaType {
+  image
+  audio
+  video
+}
+
 model Media {
-  id        Int      @id @default(autoincrement())
-  fileName  String
-  mimeType  String
-  url       String
-  completed Boolean  @default(false)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id         Int       @id @default(autoincrement())
+  file_name  String
+  mime_type  String
+  url        String
+  type       MediaType
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
 }
 
 model Log {
@@ -26,6 +32,6 @@ model Log {
   message    String
   level      String
   ip_address String?
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
 }

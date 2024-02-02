@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Log } from '@prisma/client';
 import { PrismaService } from 'src/modules/prisma/prisma.service';
 
-type LogDTO = Omit<Log, 'id' | 'createdAt' | 'updatedAt'>;
+type LogDTO = Omit<Log, 'id' | 'created_at' | 'updated_at'>;
 
 @Injectable()
 export class LoggerService {
