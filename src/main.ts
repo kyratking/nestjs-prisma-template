@@ -18,8 +18,8 @@ async function bootstrap() {
   });
   const theme = new SwaggerTheme('v3');
   const config = new DocumentBuilder()
-    .setTitle('To Do List')
-    .setDescription('A backend for to do list using Prisma and NestJS.')
+    .setTitle('NestJS Starter Template')
+    .setDescription('Please add a nice description for your project here!')
     .setVersion('1.0.0')
     .addTag('')
     // .addBearerAuth(
